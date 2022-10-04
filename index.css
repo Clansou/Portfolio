@@ -9,8 +9,9 @@
 
 main {
   display: grid;
-  grid-template-columns: 1fr 6fr;
-  grid-row: 10vh 90vh;
+  grid-template-columns: 1fr 10fr;
+  grid-template-rows: 10vh 90vh;
+  grid-template-areas: "logo navbar" "page_name content";
 }
 main .logo {
   border: black 2px solid;
@@ -25,6 +26,52 @@ main nav {
   justify-content: space-around;
   border: black 2px solid;
 }
+main nav p {
+  font-size: 30px;
+}
 
+.Page_name {
+  height: 100%;
+  border: black 2px solid;
+}
+.Page_name div {
+  position: relative;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  top: 25%;
+  text-align: center;
+}
+.Page_name div h2 {
+  font-size: 50px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  border: black 2px solid;
+  justify-content: center;
+}
+.content div {
+  margin: auto;
+  width: 70%;
+  height: 100%;
+}
+.content div .title {
+  height: 50%;
+  font-size: 60px;
+  text-align: center;
+  justify-content: center;
+}
+.content div .title h1 {
+  margin-top: 15vh;
+}
+.content div .text {
+  width: 50%;
+  height: 20%;
+  font-style: 25px;
+}
 
 /*# sourceMappingURL=index.css.map */

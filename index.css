@@ -1,3 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-row: 10vh 90vh;
+}
+main .logo {
+  border: black 2px solid;
+}
+main .logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+main nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: black 2px solid;
+}
 
 
 /*# sourceMappingURL=index.css.map */

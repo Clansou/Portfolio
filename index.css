@@ -11,6 +11,10 @@ h1, h2, h3, a {
   font-family: garamond;
 }
 
+body {
+  background: white;
+}
+
 header {
   width: 100%;
   position: fixed;
@@ -19,8 +23,9 @@ header {
   grid-template-columns: 1fr 10fr;
   grid-template-rows: 10vh;
   grid-template-areas: "logo navbar";
-  background-color: white;
+  background-color: #c4c4c4;
   border-bottom: 2px solid black;
+  color: #262626;
 }
 header .logo img {
   max-width: 100%;
@@ -53,6 +58,8 @@ main .scroller section {
   height: 100%;
   border-right: solid 2px black;
   position: sticky;
+  background-color: #c4c4c4;
+  color: #262626;
 }
 .Page_name div {
   position: relative;

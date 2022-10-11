@@ -44,14 +44,15 @@ main .scroller {
 main .scroller section {
   scroll-snap-align: start;
   display: grid;
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 1fr 4fr 6fr;
   grid-template-rows: 90vh;
-  grid-template-areas: "Page_name content";
+  grid-template-areas: "Page_name content Image";
 }
 
 .Page_name {
   height: 100%;
   border-right: solid 2px black;
+  position: sticky;
 }
 .Page_name div {
   position: relative;
@@ -73,23 +74,32 @@ main .scroller section {
   justify-content: center;
 }
 .content div {
+  padding-top: 100px;
   margin: auto;
-  width: 70%;
+  width: 80%;
   height: 100%;
 }
 .content div .title {
-  height: 50%;
+  height: 25%;
   font-size: 60px;
   text-align: center;
   justify-content: center;
-}
-.content div .title h1 {
-  margin-top: 15vh;
 }
 .content div .text {
   width: 50%;
   height: 20%;
   font-style: 25px;
+}
+
+.image {
+  text-align: center;
+  margin: auto;
+  display: flex;
+}
+
+img {
+  height: 40vh;
+  width: auto;
 }
 
 /*# sourceMappingURL=index.css.map */

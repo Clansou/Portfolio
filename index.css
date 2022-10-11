@@ -7,32 +7,51 @@
   vertical-align: baseline;
 }
 
-main {
+h1, h2, h3, a {
+  font-family: garamond;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
   display: grid;
   grid-template-columns: 1fr 10fr;
-  grid-template-rows: 10vh 90vh;
-  grid-template-areas: "logo navbar" "page_name content";
+  grid-template-rows: 10vh;
+  grid-template-areas: "logo navbar";
+  background-color: white;
+  border-bottom: 2px solid black;
 }
-main .logo {
-  border: black 2px solid;
-}
-main .logo img {
+header .logo img {
   max-width: 100%;
   max-height: 100%;
 }
-main nav {
+header nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border: black 2px solid;
 }
-main nav p {
+header nav a {
   font-size: 30px;
+}
+
+main .scroller {
+  margin-top: 10vh;
+  height: 90vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+main .scroller section {
+  scroll-snap-align: start;
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  grid-template-rows: 90vh;
+  grid-template-areas: "Page_name content";
 }
 
 .Page_name {
   height: 100%;
-  border: black 2px solid;
+  border-right: solid 2px black;
 }
 .Page_name div {
   position: relative;
@@ -51,7 +70,6 @@ main nav p {
 .content {
   display: flex;
   height: 100%;
-  border: black 2px solid;
   justify-content: center;
 }
 .content div {

@@ -11,7 +11,7 @@ h1,h2,h3,a{
 }
 
 body{
-    background: white;
+    background: darkblue;
 }
 header{
     width: 100%;
@@ -52,11 +52,12 @@ main .scroller{
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     section{
+        background-color: white;
         scroll-snap-align: start;
         display: grid;
-        grid-template-columns: 1fr 4fr 6fr;
+        grid-template-columns: 1fr 11fr;
         grid-template-rows: 90vh;
-        grid-template-areas: "Page_name content Image";
+        grid-template-areas: "Page_name content";
 
     }
 }
@@ -84,26 +85,29 @@ main .scroller{
     
 }
 .content{
-    display: flex;
     height: 100%;
     justify-content: center;
-    div{
-        padding-top: 100px;
-        margin: auto;
-        width: 80%;
-        height: 100%;
-        .title{
-            height: 25%;
-            font-size: 60px;
-            text-align: center;
-            justify-content: center;
-        }
-        .text{
-            width: 50%;
-            height: 20%;
-            font-style: 25px;
+    .home{
+        display: flex;
+        div{
+            padding-top: 100px;
+            margin: auto;
+            width: 80%;
+            height: 100%;
+            .title{
+                height: 25%;
+                font-size: 60px;
+                text-align: center;
+                justify-content: center;
+            }
+            .text{
+                width: 50%;
+                height: 20%;
+                font-style: 25px;
+            }
         }
     }
+    
 
 }
 .image{
@@ -114,4 +118,39 @@ main .scroller{
 img{
     height: 40vh;
     width: auto;
+}
+.projects{
+    display: flex;
+    width: 80vw;
+    margin-left: 50px;
+    .panel{
+        background-size: auto 110%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 80vh;
+        border-radius: 50px;
+        flex: 0.5;
+        cursor: pointer;
+        margin: 10px;
+        position: relative;
+        transition: flex 0.7s ease-in;
+        -webkit-transition: all 700ms ease-in;
+        border: 2px solid black;
+        h3{
+            font-size: 24px;
+            position: absolute;
+            bottom: 20px;
+            left: 28vw;
+            margin: 0;
+            opacity: 0;
+        }
+    }
+
+}
+.panel.active{
+    flex: 5;
+    h3{
+        opacity: 1;
+        transition: opacity 0.3s ease-in 0.4s;
+    }
 }

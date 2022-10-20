@@ -124,7 +124,7 @@ img{
     width: 80vw;
     margin-left: 50px;
     .panel{
-        background-size: auto 110%;
+        background-size:auto;
         background-position: center;
         background-repeat: no-repeat;
         height: 80vh;
@@ -140,7 +140,7 @@ img{
             font-size: 24px;
             position: absolute;
             bottom: 20px;
-            left: 28vw;
+            left: 45%;
             margin: 0;
             opacity: 0;
         }

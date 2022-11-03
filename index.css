@@ -1,12 +1,20 @@
 * {
-  --main-color_1:#b3b3b3;
-  --main-color_2:#ffffff;
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+}
+
+:root {
+  --main-color_1:#b3b3b3;
+  --main-color_2:#ffffff;
+  --bg: #1E1D3C;
+  --transition: stroke-dashoffset 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  --circle-bg: rgba(43, 26, 106, 0.218);
+  --section-after: #6A38F1;
+  --box: #6352d3;
 }
 
 h1, h2, h3, a {
@@ -150,6 +158,96 @@ img {
 .panel.active h3 {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
+}
+
+#About_me .c_About_me {
+  display: flex;
+  justify-content: space-around;
+}
+#About_me .c_About_me .CV {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#About_me .c_About_me .CV img {
+  padding: 5em 0;
+}
+#About_me .c_About_me .CV .button {
+  display: block;
+  width: 115px;
+  height: 25px;
+  background: #3b1c8b;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20%;
+  color: var(--main-color_2);
+  font-size: 20px;
+  text-decoration: none;
+}
+#About_me .c_About_me .skills {
+  color: var(--main-color_1);
+  position: relative;
+  top: 20%;
+  text-align: center;
+}
+#About_me .c_About_me .skills h3 {
+  color: var(--main-color_2);
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+#About_me .c_About_me .skills .skills_info {
+  display: flex;
+}
+#About_me .c_About_me .skills .skills_info .skill_info {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  align-items: center;
+}
+#About_me .c_About_me .skills .skills_info .skill_info img {
+  width: auto;
+  height: 150px;
+}
+#About_me .c_About_me .skills .skills_info .skill_info div {
+  margin: 20px 0;
+}
+#About_me .c_About_me .skills .skills_info .skill_info h5 {
+  font-size: 20px;
+}
+
+@keyframes growProgressBar {
+  0%, 33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+div[role=progressbar] {
+  --size: 12rem;
+  --fg: #3b1c8b;
+  --bg: #def;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0), conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role=progressbar]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) "%";
 }
 
 /*# sourceMappingURL=index.css.map */

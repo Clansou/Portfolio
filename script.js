@@ -11,3 +11,7 @@ const removeActiveClasses = () =>{
         panel.classList.remove("active");
     });
 };
+
+
+
+

@@ -132,7 +132,7 @@ img{
     width: 80vw;
     margin-left: 50px;
     .panel{
-        background-size:auto;
+        background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
         height: 80vh;
@@ -144,6 +144,7 @@ img{
         transition: flex 0.7s ease-in;
         -webkit-transition: all 700ms ease-in;
         border: 2px solid black;
+        box-shadow:  5px 14px 25px rgb(0 0 0 / 60%);
         h3{
             font-size: 24px;
             position: absolute;

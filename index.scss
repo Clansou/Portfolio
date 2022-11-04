@@ -248,7 +248,7 @@ img{
     initial-value: 0;
   }
   
-  div[role="progressbar"] {
+  .ProgressBar{
     --size: 12rem;
     --fg: #3b1c8b;
     --bg: #def;
@@ -268,7 +268,7 @@ img{
     color: var(--fg);
   }
   
-  div[role="progressbar"]::before {
+  .ProgressBar:before {
     counter-reset: percentage var(--value);
     content: counter(percentage) '%';
   }

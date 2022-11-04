@@ -256,20 +256,20 @@ div[role=progressbar]::before {
   content: counter(percentage) "%";
 }
 
-#contact {
+#Contact {
   margin: auto;
 }
-#contact form {
+#Contact form {
   max-width: 420px;
   margin: 30px auto;
   text-align: center;
 }
-#contact form h3 {
+#Contact form h3 {
   font-size: 40px;
   color: var(--main-color_2);
   margin: 30px auto;
 }
-#contact form .feedback-input {
+#Contact form .feedback-input {
   color: white;
   font-size: 18px;
   border-radius: 5px;
@@ -281,11 +281,11 @@ div[role=progressbar]::before {
   width: 100%;
   box-sizing: border-box;
 }
-#contact form textarea {
+#Contact form textarea {
   height: 150px;
   line-height: 150%;
 }
-#contact form [type=submit] {
+#Contact form [type=submit] {
   width: 100%;
   background: #3b1c8b;
   border-radius: 5px;
@@ -298,17 +298,28 @@ div[role=progressbar]::before {
   margin-top: -4px;
   transition: all 0.3s;
 }
-#contact form [type=submit]:hover {
+#Contact form [type=submit]:hover {
   background: #1E1D3C;
   color: var(--main-color_1);
 }
-#contact .social_network {
+#Contact .social_network {
   text-align: center;
   align-items: center;
   display: flex;
   justify-content: space-around;
   width: 50%;
   margin: 150px auto 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color_2);
+  font-size: 40px;
+  transition: all 0.3s;
+}
+
+a:hover {
+  color: var(--main-color_1);
 }
 
 /*# sourceMappingURL=index.css.map */

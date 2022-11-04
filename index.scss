@@ -269,7 +269,7 @@ img{
     counter-reset: percentage var(--value);
     content: counter(percentage) '%';
   }
-#contact{
+#Contact{
   margin: auto;
   form { 
     max-width:420px; 
@@ -323,6 +323,15 @@ img{
     width: 50%;
     margin: 150px auto 0;
   }
+}
+a{
+  text-decoration: none;
+  color: var(--main-color_2);
+  font-size: 40px;
+  transition: all 0.3s;
+}
+a:hover{
+  color:var(--main-color_1);
 }
 
   

@@ -32,9 +32,7 @@ header{
     position: fixed;
     top: 0;
     display: grid;
-    grid-template-columns: 1fr 10fr;
-    grid-template-rows: 10vh;
-    grid-template-areas: "logo navbar";
+    height: 10vh;
     background: linear-gradient(#551b7f5b,#551b7f00);
     color: var(--main-color_1);
 
@@ -132,8 +130,12 @@ main .scroller{
     display:flex;
 }
 img{
-    height: 40vh;
+    height: 60vh;
     width: auto;
+    opacity: 0.8;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0)
+    2px 5px 16px 0px #0B325E
+    inset -1px 3px 8px 5px #1F87FF;
 }
 .projects{
     display: flex;
@@ -153,6 +155,7 @@ img{
         -webkit-transition: all 700ms ease-in;
         border: 2px solid black;
         box-shadow:  5px 14px 25px rgb(0 0 0 / 60%);
+        opacity: 0.8;
         h3{
             font-size: 24px;
             position: absolute;

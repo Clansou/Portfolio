@@ -31,9 +31,7 @@ header {
   position: fixed;
   top: 0;
   display: grid;
-  grid-template-columns: 1fr 10fr;
-  grid-template-rows: 10vh;
-  grid-template-areas: "logo navbar";
+  height: 10vh;
   background: linear-gradient(rgba(85, 27, 127, 0.3568627451), rgba(85, 27, 127, 0));
   color: var(--main-color_1);
 }
@@ -119,8 +117,10 @@ main .scroller section {
 }
 
 img {
-  height: 40vh;
+  height: 60vh;
   width: auto;
+  opacity: 0.8;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0) 2px 5px 16px 0px #0B325E inset -1px 3px 8px 5px #1F87FF;
 }
 
 .projects {
@@ -142,6 +142,7 @@ img {
   -webkit-transition: all 700ms ease-in;
   border: 2px solid black;
   box-shadow: 5px 14px 25px rgba(0, 0, 0, 0.6);
+  opacity: 0.8;
 }
 .projects .panel h3 {
   font-size: 24px;

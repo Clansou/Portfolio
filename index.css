@@ -48,6 +48,11 @@ header nav {
 header nav a {
   font-size: 30px;
 }
+@media screen and (max-width: 500px) {
+  header nav a {
+    font-size: 20px;
+  }
+}
 
 main .scroller {
   margin-top: 10vh;
@@ -61,6 +66,15 @@ main .scroller section {
   grid-template-columns: 1fr 11fr;
   grid-template-rows: 90vh;
   grid-template-areas: "Page_name content";
+}
+@media screen and (max-width: 1000px) {
+  main .scroller {
+    overflow-y: none;
+    scroll-snap-type: none;
+  }
+  main .scroller section {
+    scroll-snap-align: none;
+  }
 }
 
 .Page_name {
@@ -82,6 +96,11 @@ main .scroller section {
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
+@media screen and (max-width: 1000px) {
+  .Page_name {
+    display: none;
+  }
+}
 
 .content {
   height: 100%;
@@ -90,37 +109,61 @@ main .scroller section {
 .content .home {
   display: flex;
 }
-.content .home div {
-  padding-top: 100px;
-  margin: auto;
-  width: 80%;
+.content .home .main_text {
+  margin-top: 30vh;
+  width: 50vw;
   height: 100%;
 }
-.content .home div .title {
+@media screen and (max-width: 1000px) {
+  .content .home .main_text {
+    width: 60vw;
+  }
+}
+.content .home .main_text .title {
   height: 25%;
   font-size: 60px;
   text-align: center;
   justify-content: center;
   color: var(--main-color_2);
 }
-.content .home div .text {
+.content .home .main_text .text {
+  margin: 100px auto;
   width: 50%;
   height: 20%;
   font-size: 16px;
   color: var(--main-color_1);
   font-family: sans-serif;
 }
-
-.image {
+.content .home .image {
   text-align: center;
   margin: auto;
   display: flex;
+}
+@media screen and (max-width: 700px) {
+  .content .home {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .content .home .main_text {
+    margin: 10vh auto 0;
+    width: 100vw;
+    height: 100%;
+  }
+  .content .home .main_text .text {
+    margin: 5vh auto 0;
+    width: 80%;
+  }
 }
 
 img {
   height: 60vh;
   width: auto;
   opacity: 0.8;
+}
+@media screen and (max-width: 1000px) {
+  img {
+    height: 40vh;
+  }
 }
 
 .projects {
@@ -145,12 +188,29 @@ img {
   opacity: 0.8;
 }
 .projects .panel h3 {
-  font-size: 24px;
+  font-size: 32px;
   position: absolute;
   bottom: 20px;
   left: 45%;
   margin: 0;
   opacity: 0;
+}
+@media screen and (max-width: 1000px) {
+  .projects .panel h3 {
+    left: 35%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .projects {
+    flex-direction: column;
+    height: 70vh;
+  }
+  .projects .panel {
+    flex: 2;
+    height: 80vh;
+    width: 60vw;
+    margin: 20px auto;
+  }
 }
 
 .panel.active {
@@ -159,6 +219,7 @@ img {
 .panel.active h3 {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
+  color: var(--main-color_2);
 }
 
 #About_me .c_About_me {
@@ -221,7 +282,39 @@ img {
 #About_me .c_About_me .skills .skills_info .skill_info p {
   font-size: 20px;
 }
+@media screen and (max-width: 1200px) {
+  #About_me .c_About_me .skills .skills_info .skill_info {
+    padding: 0.5em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #About_me .c_About_me {
+    flex-direction: column;
+    width: 100vw;
+  }
+  #About_me .c_About_me .skills_info {
+    justify-content: center;
+  }
+  #About_me .c_About_me img {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #About_me .c_About_me .skills_info {
+    flex-direction: column;
+  }
+}
 
+@media screen and (max-width: 1000px) {
+  #About_me {
+    height: 140vh;
+  }
+}
+@media screen and (max-width: 700px) {
+  #About_me {
+    height: 230vh;
+  }
+}
 .ProgressBar {
   --size: 12rem;
   --fg: #3b1c8b;
@@ -247,7 +340,8 @@ img {
   margin: auto;
 }
 #Contact .direct-contact-container {
-  max-width: 400px;
+  min-width: 400px;
+  width: 50%;
   margin: 150px auto;
   background-color: #1E1D3C;
   opacity: 0.8;
@@ -260,11 +354,29 @@ img {
   padding-right: 20px;
 }
 #Contact .direct-contact-container .contact-list .list-item {
-  line-height: 4;
+  line-height: 5;
 }
 #Contact .direct-contact-container .contact-list .contact-text {
-  font-size: 1.3rem;
+  font-size: 2rem;
   letter-spacing: 1.9px;
+}
+#Contact .direct-contact-container .contact-list .contact-text a {
+  font-size: 2rem;
+}
+@media screen and (max-width: 1200px) {
+  #Contact .direct-contact-container .contact-list .contact-text {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #Contact .direct-contact-container .contact-list .contact-text a {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #Contact .direct-contact-container .contact-list .contact-text {
+    font-size: 1rem;
+  }
 }
 #Contact .direct-contact-container .contact-list .place {
   margin-left: 62px;
@@ -295,6 +407,11 @@ img {
 }
 #Contact .social_network i:hover {
   font-size: 1.5em;
+}
+@media screen and (max-width: 1000px) {
+  #Contact .content {
+    width: 100vw;
+  }
 }
 
 a, i {

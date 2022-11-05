@@ -1,4 +1,4 @@
-
+@use 'mixins';
 
 *{
     
@@ -54,6 +54,9 @@ header{
 
         a{
             font-size: 30px;
+            @include mixins.breakpoint(500px){
+                font-size: 20px;
+            }
         }
         
     }
@@ -71,7 +74,15 @@ main .scroller{
         grid-template-areas: "Page_name content";
 
     }
+    @include mixins.breakpoint(1000px){
+       overflow-y: none ;
+       scroll-snap-type: none;
+       section{
+            scroll-snap-align: none;
+       } 
+    }
 }
+
 .Page_name{
     display: flex;
     height: 100%;
@@ -93,6 +104,9 @@ main .scroller{
             text-orientation: upright;
         }
     }
+    @include mixins.breakpoint(1000px){
+        display: none;
+    }
     
 }
 .content{
@@ -101,11 +115,13 @@ main .scroller{
 
     .home{
         display: flex;
-        div{
-            padding-top: 100px;
-            margin: auto;
-            width: 80%;
+        .main_text{
+            margin-top: 30vh;
+            width: 50vw;
             height: 100%;
+            @include mixins.breakpoint(1000px){
+                width: 60vw;
+            }
             .title{
                 height: 25%;
                 font-size: 60px;
@@ -114,6 +130,7 @@ main .scroller{
                 color: var(--main-color_2);
             }
             .text{
+                margin: 100px auto;
                 width: 50%;
                 height: 20%;
                 font-size: 16px;
@@ -121,19 +138,37 @@ main .scroller{
                 font-family: sans-serif;
             }
         }
+        .image{
+            text-align:center;
+            margin:auto;
+            display:flex;
+
+        }
+    @include mixins.breakpoint(700px){
+        display: flex;
+        flex-direction: column-reverse;
+        .main_text{
+            margin: 10vh auto 0;
+            width: 100vw;
+            height: 100%;
+            .text{
+                margin: 5vh auto 0;
+                width: 80%;
+            }
+        }
+    }
     }
     
 
 }
-.image{
-    text-align:center;
-    margin:auto;
-    display:flex;
-}
+
 img{
     height: 60vh;
     width: auto;
     opacity: 0.8;
+    @include mixins.breakpoint(1000px){
+      height:  40vh;
+    }
 }
 .projects{
     display: flex;
@@ -155,12 +190,25 @@ img{
         box-shadow:  5px 14px 25px rgb(0 0 0 / 60%);
         opacity: 0.8;
         h3{
-            font-size: 24px;
+            font-size: 32px;
             position: absolute;
             bottom: 20px;
             left: 45%;
             margin: 0;
             opacity: 0;
+            @include mixins.breakpoint(1000px){
+                left: 35%;
+            }
+        }
+    }
+    @include mixins.breakpoint(1000px){  
+        flex-direction: column;
+        height: 70vh;
+        .panel{
+            flex: 2;
+            height: 80vh;
+            width: 60vw;
+            margin: 20px auto;
         }
     }
 
@@ -170,6 +218,7 @@ img{
     h3{
         opacity: 1;
         transition: opacity 0.3s ease-in 0.4s;
+        color: var(--main-color_2);
     }
 }
 #About_me{
@@ -232,7 +281,38 @@ img{
                     }
                 }
             }
+        
         }
+    @include mixins.breakpoint(1200px){
+        .skills .skills_info .skill_info{
+            padding: 0.5em;
+        }
+    }
+    @include mixins.breakpoint(1000px){
+        flex-direction: column;
+        width: 100vw;
+        .skills_info{
+            justify-content: center;
+        }
+        img{
+            height: 400px;
+        }
+    }
+    @include mixins.breakpoint(700px){
+        .skills_info{
+            flex-direction: column;
+        }
+    }
+    }
+}
+@include mixins.breakpoint(1000px){
+    #About_me{
+        height:140vh;
+    }
+}
+@include mixins.breakpoint(700px){
+    #About_me{
+        height:230vh;
     }
 }
 
@@ -264,7 +344,8 @@ img{
 #Contact{
     margin: auto;
     .direct-contact-container {
-        max-width: 400px;
+        min-width: 400px;
+        width: 50%;
         margin: 150px auto;
         background-color: #1E1D3C;
         opacity: 0.8;
@@ -275,13 +356,28 @@ img{
             margin-left: -30px;
             padding-right: 20px;
             .list-item {
-                line-height: 4;
+                line-height: 5;
             }
           
             .contact-text {
-                font-size: 1.3rem;
+                font-size: 2rem;
                 letter-spacing: 1.9px;
+                a{
+                    font-size: 2rem;
+                }
+                @include mixins.breakpoint(1200px){
+                    font-size: 1.5rem;
+                }
+                @include mixins.breakpoint(1000px){
+                    a{
+                        font-size: 1.5rem;
+                    }
+                }
+                @include mixins.breakpoint(1000px){
+                    font-size: 1rem;
+                }
             }
+            
           
             .place {
                 margin-left: 62px;
@@ -319,6 +415,11 @@ img{
             font-size: 1.5em;
         }
         
+    }
+    @include mixins.breakpoint(1000px){
+        .content{
+            width: 100vw;
+        }
     }
 }
 a, i{

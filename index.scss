@@ -109,6 +109,11 @@ main .scroller{
     }
     
 }
+@include mixins.breakpoint(500px){
+    #Home{
+        height: 100vh;
+    }
+}
 .content{
     height: 100%;
     justify-content: center;
@@ -116,12 +121,9 @@ main .scroller{
     .home{
         display: flex;
         .main_text{
-            margin-top: 30vh;
-            width: 50vw;
+            margin-top: 20vh;
+            width: 60vw;
             height: 100%;
-            @include mixins.breakpoint(1000px){
-                width: 60vw;
-            }
             .title{
                 height: 25%;
                 font-size: 60px;
@@ -133,9 +135,13 @@ main .scroller{
                 margin: 100px auto;
                 width: 50%;
                 height: 20%;
-                font-size: 16px;
+                font-size: 24px;
+                font-style: italic;
                 color: var(--main-color_1);
                 font-family: sans-serif;
+                @include mixins.breakpoint(1000px){
+                        width: 70%;
+                }
             }
         }
         .image{
@@ -154,6 +160,7 @@ main .scroller{
             .text{
                 margin: 5vh auto 0;
                 width: 80%;
+                font-size: 20px;
             }
         }
     }
@@ -420,7 +427,20 @@ img{
         .content{
             width: 100vw;
         }
+        
     }
+    @include mixins.breakpoint(600px){
+        .direct-contact-container{
+            min-width: 200px;
+            .contact-list .contact-text{
+                font-size: 12px;
+                a{
+                    font-size: 16px;
+                }
+            }
+        }
+    }    
+
 }
 a, i{
     text-decoration: none;

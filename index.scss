@@ -283,10 +283,11 @@ img{
       width:100%;
       box-sizing: border-box;
     }
-    textarea {
-      height: 150px;
-      line-height: 150%;
+    .text_feedback{
+        height: 150px;
+        line-height: 150%;
     }
+
     [type="submit"] {
       width: 100%;
       background:#3b1c8b;

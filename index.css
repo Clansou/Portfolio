@@ -229,6 +229,9 @@ img {
     font-size: 32px;
     bottom: 75px;
   }
+  .projects .panel a {
+    left: 25%;
+  }
 }
 
 .panel.active {

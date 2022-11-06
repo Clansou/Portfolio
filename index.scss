@@ -1,7 +1,8 @@
+/* to help me with break point */
 @use 'mixins';
 
 *{
-    
+    /* reset */
     margin: 0;
     padding: 0;
 	border: 0;
@@ -11,9 +12,13 @@
     color: var(--main-color_1);
 }
 :root {
+    /* main var */
     --main-color_1:#b3b3b3;
     --main-color_2:#ffffff;
+    --main-color_3:#3b1c8b;
+    --main-color_4:#1E1D3C;
     --bg: #1E1D3C;
+    /* style progress bar var */
     --transition: stroke-dashoffset 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
     --circle-bg: rgba(43, 26, 106, 0.218);
     --section-after: #6A38F1;
@@ -28,6 +33,30 @@ body{
     background-size: cover;
     
 }
+
+img{
+    height: 60vh;
+    width: auto;
+    opacity: 0.8;
+    @include mixins.breakpoint(1000px){
+      height:  40vh;
+    }
+}
+
+a, i{
+    text-decoration: none;
+    color: var(--main-color_2);
+    font-size: 40px;
+    transition: all 0.3s;
+  }
+  a:hover{
+    color:var(--main-color_1);
+  }
+
+/* header section*/
+
+
+
 header{
     width: 100%;
     position: fixed;
@@ -51,9 +80,15 @@ header{
         
     }
 }
+
+
+/* scroll section */
+
+
 main .scroller{
     margin-top: 10vh;
     height: 90vh;
+    /* scroll snap */
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     section{
@@ -73,6 +108,10 @@ main .scroller{
     }
 }
 
+
+/* right side section */
+
+
 .Page_name{
     display: flex;
     height: 100%;
@@ -90,6 +129,7 @@ main .scroller{
 
         h2 {
             font-size: 50px;
+            /* to write on vertical */
             writing-mode: vertical-rl;
             text-orientation: upright;
         }
@@ -99,6 +139,11 @@ main .scroller{
     }
     
 }
+
+ 
+/*  Home page section  */
+
+
 @include mixins.breakpoint(500px){
     #Home{
         height: 100vh;
@@ -159,14 +204,10 @@ main .scroller{
 
 }
 
-img{
-    height: 60vh;
-    width: auto;
-    opacity: 0.8;
-    @include mixins.breakpoint(1000px){
-      height:  40vh;
-    }
-}
+
+/*  Projects section  */
+
+
 .projects{
     display: flex;
     width: 80vw;
@@ -181,8 +222,7 @@ img{
         cursor: pointer;
         margin: 10px;
         position: relative;
-        transition: flex 0.7s ease-in;
-        -webkit-transition: all 700ms ease-in;
+        transition: all 0.7s ease-in;
         border: 2px solid black;
         box-shadow:  5px 14px 25px rgb(0 0 0 / 60%);
         opacity: 0.8;
@@ -238,7 +278,7 @@ img{
     display: block;
     width: 130px;
     height: 30px;
-    background: #3b1c8b;
+    background: var(--main-color_3);
     text-align: center;
     padding: 15px;
     color: var(--main-color_2) !important;
@@ -251,6 +291,11 @@ img{
   color:var(--main-color_1);
   
 }
+
+
+/*  About_me section  */
+
+
 #About_me{
     .c_About_me{
          display: flex;
@@ -332,8 +377,6 @@ img{
   
   .ProgressBar{
     --size: 12rem;
-    --fg: #3b1c8b;
-    --bg: #def;
     --pgPercentage: var(--value);
     width: var(--size);
     height: var(--size);
@@ -341,18 +384,23 @@ img{
     display: grid;
     place-items: center;
     background: 
-      radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
-      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+      radial-gradient(closest-side, var(--main-color_2) 80%, transparent 0 99.9%, var(--main-color_2) 0),
+      conic-gradient(var(--main-color_3) calc(var(--pgPercentage) * 1%), var(--main-color_2) 0)
       ;
-    font-family: Helvetica, Arial, sans-serif;
     font-size: calc(var(--size) / 5);
     color: var(--fg);
-  }
+}
   
   .ProgressBar:before {
+    color: #000;
     counter-reset: percentage var(--value);
     content: counter(percentage) '%';
-  }
+}
+
+
+/*  Contact section  */
+
+
 #Contact{
     margin: auto;
     .direct-contact-container {
@@ -360,7 +408,7 @@ img{
         width: 60%;
         max-width: 600px;
         margin: 150px auto;
-        background-color: #1E1D3C;
+        background-color: var(--main-color_4);
         opacity: 0.8;
         padding: 60px;
         border-radius: 50px;
@@ -374,7 +422,7 @@ img{
           
             .contact-text {
                 font-size: 2rem;
-                letter-spacing: 1.9px;
+                letter-spacing: 2px;
                 a{
                     font-size: 2rem;
                 }
@@ -469,15 +517,7 @@ img{
     }    
 
 }
-a, i{
-    text-decoration: none;
-    color: var(--main-color_2);
-    font-size: 40px;
-    transition: all 0.3s;
-  }
-  a:hover{
-    color:var(--main-color_1);
-  }
+
 
   
   

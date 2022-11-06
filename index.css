@@ -194,18 +194,24 @@ img {
   box-shadow: 5px 14px 25px rgba(0, 0, 0, 0.6);
   opacity: 0.8;
 }
-.projects .panel h3 {
+.projects .panel h3, .projects .panel a {
   font-size: 32px;
   position: absolute;
   bottom: 20px;
   left: 45%;
   margin: 0;
   opacity: 0;
+  visibility: hidden;
 }
 @media screen and (max-width: 1000px) {
-  .projects .panel h3 {
+  .projects .panel h3, .projects .panel a {
     left: 35%;
   }
+}
+.projects .panel h3 {
+  bottom: 100px;
+  left: 40%;
+  font-size: 48px;
 }
 @media screen and (max-width: 1000px) {
   .projects {
@@ -218,15 +224,39 @@ img {
     width: 60vw;
     margin: 20px auto;
   }
+  .projects .panel h3 {
+    left: 30%;
+    font-size: 32px;
+    bottom: 75px;
+  }
 }
 
 .panel.active {
   flex: 5;
 }
-.panel.active h3 {
+.panel.active h3, .panel.active a {
   opacity: 1;
+  visibility: visible;
   transition: opacity 0.3s ease-in 0.4s;
   color: var(--main-color_2);
+}
+
+.button {
+  display: block;
+  width: 115px;
+  height: 25px;
+  background: #3b1c8b;
+  text-align: center;
+  padding: 15px;
+  color: var(--main-color_2) !important;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s !important;
+}
+
+.button:hover {
+  background: #1E1D3C;
+  color: var(--main-color_1);
 }
 
 #About_me .c_About_me {
@@ -240,23 +270,6 @@ img {
 }
 #About_me .c_About_me .CV img {
   padding: 5em 0;
-}
-#About_me .c_About_me .CV .button {
-  display: block;
-  width: 115px;
-  height: 25px;
-  background: #3b1c8b;
-  text-align: center;
-  padding: 15px;
-  border-radius: 20%;
-  color: var(--main-color_2);
-  font-size: 20px;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-#About_me .c_About_me .CV .button:hover {
-  background: #1E1D3C;
-  color: var(--main-color_1);
 }
 #About_me .c_About_me .skills {
   color: var(--main-color_1);

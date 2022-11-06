@@ -246,7 +246,7 @@ img{
 }
 .button {
     display: block;
-    width: 115px;
+    width: 130px;
     height: 25px;
     background: #3b1c8b;
     text-align: center;
@@ -447,10 +447,25 @@ img{
     @include mixins.breakpoint(600px){
         .direct-contact-container{
             min-width: 200px;
-            .contact-list .contact-text{
-                font-size: 12px;
-                a{
-                    font-size: 16px;
+            .contact-list
+            {
+                .place {
+                    margin-left: 42px;
+                }
+              
+                .phone {
+                    margin-left: 36px;
+                }
+              
+                .gmail {
+                    
+                    margin-left: 37px;
+                }
+                .contact-text{
+                    font-size: 12px;
+                    a{
+                        font-size: 16px;
+                    }
                 }
             }
         }

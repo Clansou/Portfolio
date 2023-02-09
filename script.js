@@ -1,18 +1,3 @@
-const panels = document.querySelectorAll(".panel");
-panels.forEach((panel) => {
-    panel .addEventListener("click",()=>{
-        removeActiveClasses();
-        panel.classList.add("active");
-    });
-});
-
-const removeActiveClasses = () =>{
-    panels.forEach((panel) => {
-        panel.classList.remove("active");
-    });
-};
-
-
 let anchorSelector = 'a[href^="#"]';
 let anchorList = document.querySelectorAll(anchorSelector);
 anchorList.forEach(link => {
@@ -29,5 +14,7 @@ anchorList.forEach(link => {
         });
     }
 });
+console.log()
+document.addEventListener('wheel', (event) => {console.log('i scrolled')});
 
 

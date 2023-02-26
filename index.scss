@@ -222,7 +222,7 @@ main .scroller{
     margin-right: auto;
     align-content: center;
 	grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
-    grid-auto-rows: 250px;
+    grid-auto-rows: 300px;
     @include mixins.breakpoint(400px){
         grid-template-columns: repeat(auto-fill, minmax(201px,1fr));
     }
@@ -289,6 +289,22 @@ main .scroller{
             font-size: 0.9125rem;
             line-height: 160%;
             color: #999;
+        }
+        a{
+            text-align: center;
+            background-color:var(--box);
+            border-radius:6px;
+            border:1px solid var(--main-color_4);
+            padding:6px 24px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #9b14b3;
+            font-size:15px;
+            font-weight:bold;
+            cursor:pointer;
+            color:#ffffff;
+        }
+        a:hover{
+            background-color: var(--main-color_3);
         }
     }
 }

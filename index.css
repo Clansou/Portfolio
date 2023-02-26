@@ -28,6 +28,11 @@ h1, h2, h3, a {
   font-family: garamond;
 }
 
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: xx-large;
+  }
+}
 body {
   background: url(img/subtle-prism.webp);
   background-size: cover;
@@ -257,6 +262,12 @@ main .scroller section {
   background: #313131;
   border-radius: 10px;
   cursor: pointer;
+}
+@media screen and (max-width: 400px) {
+  #Projects .content .flip > .front,
+#Projects .content .flip > .back {
+    max-height: 250px;
+  }
 }
 #Projects .content .flip > .front h2,
 #Projects .content .flip > .back h2 {

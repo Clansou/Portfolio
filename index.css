@@ -249,7 +249,7 @@ main .scroller section {
 }
 #Projects .content .flip > .front h2,
 #Projects .content .flip > .back h2 {
-  font-size: 1em;
+  font-size: 2.5em;
   text-align: center;
   margin-bottom: 20px;
 }

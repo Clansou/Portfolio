@@ -269,24 +269,6 @@ main .scroller section {
   line-height: 160%;
   color: #999;
 }
-#Projects .content .flip > .front a,
-#Projects .content .flip > .back a {
-  text-align: center;
-  background-color: var(--box);
-  border-radius: 6px;
-  border: 1px solid var(--main-color_4);
-  padding: 6px 24px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #9b14b3;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #ffffff;
-}
-#Projects .content .flip > .front a:hover,
-#Projects .content .flip > .back a:hover {
-  background-color: var(--main-color_3);
-}
 
 /*  About_me section  */
 #About_me .c_About_me {

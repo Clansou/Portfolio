@@ -28,6 +28,8 @@ h1,h2,h3,a{
     font-family: garamond;
 }
 
+
+
 body{
     background: url(img/subtle-prism.webp);
     background-size: cover;
@@ -360,6 +362,12 @@ main .scroller{
             flex-direction: column;
         }
     }
+    @include mixins.breakpoint(400px){
+        img{
+            height: auto;
+            width: 80%;
+        }
+    }
     }
 }
 @include mixins.breakpoint(1000px){
@@ -419,7 +427,7 @@ main .scroller{
             .list-item {
                 line-height: 5;
                 @include mixins.breakpoint(400px){
-                    i{
+                    i::before{
                         display: none;
                     }
                 }

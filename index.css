@@ -336,6 +336,12 @@ main .scroller section {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 400px) {
+  #About_me .c_About_me img {
+    height: auto;
+    width: 80%;
+  }
+}
 
 @media screen and (max-width: 1000px) {
   #About_me {
@@ -389,7 +395,7 @@ main .scroller section {
   line-height: 5;
 }
 @media screen and (max-width: 400px) {
-  #Contact .direct-contact-container .contact-list .list-item i {
+  #Contact .direct-contact-container .contact-list .list-item i::before {
     display: none;
   }
 }

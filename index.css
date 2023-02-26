@@ -254,6 +254,10 @@ main .scroller section {
   color: #999;
 }
 
+h2 {
+  font-size: 10rem;
+}
+
 /*  About_me section  */
 #About_me .c_About_me {
   display: flex;

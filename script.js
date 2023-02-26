@@ -15,6 +15,5 @@ anchorList.forEach(link => {
     }
 });
 console.log()
-document.addEventListener('wheel', (event) => {console.log('i scrolled')});
 
 
